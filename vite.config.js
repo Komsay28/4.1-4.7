@@ -7,12 +7,18 @@ export default {
     server:
     {
         host: true,
-        open: !isCodeSandbox // Open if it's not a CodeSandbox
+        open: true
     },
     build:
     {
         outDir: '../dist',
         emptyOutDir: true,
-        sourcemap: true
+        sourcemap: true,
+        assetsDir: 'assets',
+        rollupOptions: {
+            output: {
+                manualChunks: undefined
+            }
+        }
     }
 }
